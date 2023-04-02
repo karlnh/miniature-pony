@@ -53,7 +53,7 @@ router.put('/:id', async (req, res) => {
       },
     })
     .then((updatedCategory) => {
-      res.json(updatedCategory);
+      res.status(200).json(updatedCategory);
     });
   } catch (err) {
     res.status(500).json(err);
@@ -62,6 +62,18 @@ router.put('/:id', async (req, res) => {
 
 router.delete('/:id', (req, res) => {
   // delete a category by its `id` value
+  try {
+    Category.destroy({
+      where: {
+        id: req.params.id,
+      },
+    })
+    .then((deletedCategory) => {
+      res.status(200).json(deletedCategory);
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;
