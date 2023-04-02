@@ -17,7 +17,8 @@ If you want to change the files, run `npm run watch` to create a nodemon instanc
 Open something like Insomnia or Postman to easily make testable routes so you can access the data you've just made. For instance, `http://localhost:3001/api/products/6` will access the product with the product id '6'.
 
 ## Usage
-![example video]()
+![example video](https://user-images.githubusercontent.com/114628247/229370670-50a35e8f-d238-48e4-b561-89fe3170da42.mov)
 
 ## License
 Using the GGPLv3. See the LICENSE file for more detail.
+
